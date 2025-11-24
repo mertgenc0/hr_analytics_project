@@ -1,0 +1,71 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Data (büyük dosyalar için)
+data/raw/*.csv
+data/processed/*.csv
+*.xlsx
+*.db
+
+# Models (büyük model dosyaları)
+models/*.pkl
+models/*.h5
+models/*.pt
+
+# Reports
+reports/*.pdf
+reports/*.docx
+
+# Logs
+*.log
+logs/
+
+# Environment variables
+.env
+.env.local
+
+# System
+Thumbs.db
+.DS_Store
+
+# Temporary files
+*.tmp
+temp/
+tmp/
