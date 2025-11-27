@@ -31,27 +31,24 @@ ENV/
 */.ipynb_checkpoints/*
 
 # IDE
-.vscode/
+#.vscode/
 .idea/
-*.swp
-*.swo
-*~
+#*.swp
+#*.swo
+#*~
 .DS_Store
 
 # Data (büyük dosyalar için)
-data/raw/*.csv
-data/processed/*.csv
-*.xlsx
-*.db
+#*.csv
+#*.xlsx
+#*.db
 
-# Models (büyük model dosyaları)
 models/*.pkl
-models/*.h5
-models/*.pt
+
 
 # Reports
-reports/*.pdf
-reports/*.docx
+#reports/*.pdf
+#reports/*.docx
 
 # Logs
 *.log
@@ -66,6 +63,8 @@ Thumbs.db
 .DS_Store
 
 # Temporary files
-*.tmp
-temp/
-tmp/
+#*.tmp
+#temp/
+#tmp/
+
+*.pkl
