@@ -44,10 +44,13 @@ Bu proje, IBM HR Analytics veri seti kullanılarak çalışanların şirketten a
 ### Makine Öğrenmesi
 - **Scikit-learn:** ML algoritmaları ve metrikleri
 - **XGBoost:** Gradient Boosting
+- **Logistic Regression**
 - **LightGBM:** Light Gradient Boosting
+- **Random Forest Regressioın**
 - **Imbalanced-learn:** SMOTE (Dengesiz veri işleme)
 
 ### Geliştirme Ortamı
+- **PyCharm**
 - **Jupyter Notebook:** İnteraktif analiz
 - **Git:** Versiyon kontrolü
 
@@ -68,8 +71,8 @@ hr-analytics-project/
 │   ├── scaler.pkl
 │   ├── random_forest_model.pkl
 │   ├── xgboost_model.pkl
-│   └── optimized_model.pkl
-│   └── optimized_model.pkl
+│   └── logistic_regression_model.pkl
+│   └── random_forest_model.pkl
 │                        
 │── venv
 ├── requirements.txt                  
@@ -79,44 +82,6 @@ hr-analytics-project/
 
 ---
 
-## Kurulum ve Çalıştırma
-
-### 1. Repoyu Klonlayın
-```bash
-git clone [repo-url]
-cd hr-analytics-project
-```
-
-### 2. Virtual Environment Oluşturun
-```bash
-# Windows
-python -m venv venv
-venv\Scripts\activate
-
-# Mac/Linux
-python3 -m venv venv
-source venv/bin/activate
-```
-
-### 3. Bağımlılıkları Yükleyin
-```bash
-pip install -r requirements.txt
-```
-
-### 4. Veri Setini İndirin
-- [Kaggle IBM HR Analytics](https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset) 
-
-
-### 5. Jupyter Notebook'u Başlatın
-```bash
-jupyter notebook
-```
-
-### 6. Notebook'ları Sırasıyla Çalıştırın
-1. `01_Keşifsel_Veri_Analizi.ipynb`
-2. `02_Veri_Onisleme_ve_Modelleme.ipynb`
-
----
 
 ## 📈 Metodoloji
 
@@ -138,10 +103,10 @@ jupyter notebook
 
 ### 3. Model Geliştirme
 
-1. **Logistic Regression** (Baseline model)
+1. **Logistic Regression** 
 2. **Random Forest Classifier**
 3. **XGBoost Classifier**
-4. **Support Vector Machine (SVM)**
+4. **SVM**
 
 ### 4. Model Değerlendirme Metrikleri
 
@@ -154,39 +119,26 @@ jupyter notebook
 - **Cross-Validation:** Model genelleme performansı
 
 ---
-
+              
 ## Sonuçlar
 
 ### Model Performans Karşılaştırması
 
 | Model | Accuracy | F1-Score | ROC-AUC  |
-|-------|----------|-------|----------|
-| **Random Forest** | 0.836735 | 0.38  | 0.811224 |
-| **XGBoost** | 0.840136 | 0.40  | 0.8445   | 
-| **SVM** | 0.829932 | 0.48  | 0.8156   | 
-| **Logistic Regression** | 0.789116 | 0.53  | 0.7456  |
+|-------|-------|-------|----------|
+| **Random Forest** | 0.843537 | 0.36  | 0.814497 |
+| **XGBoost** | 0.846939 | 0.43  | 0.808252   | 
+| **SVM** | 0.843537 | 0.50  | 0.771126   | 
+| **Logistic Regression** | 0.58  | 0.53  | 0.847877  |
 
-### En İyi Model: **Random Forest Classifier**
+### En İyi Model: **Logistic Regression**
 
 **Neden Random Forest?**
-- En yüksek F1-Score (%53)
+- En yüksek F1-Score (%58)
 - Dengeli Precision-Recall performansı
-- Güçlü ROC-AUC skoru (0.85)
+- Güçlü ROC-AUC skoru (0.84)
 - Stabil cross-validation sonuçları
 - İyi yorumlanabilir (feature importance)
-
-### En Önemli Özellikler (Feature Importance)
-
-1. **OverTime** (18.2%) - Fazla mesai yapma durumu
-2. **MonthlyIncome** (12.4%) - Aylık gelir
-3. **Age** (9.8%) - Yaş
-4. **YearsAtCompany** (8.6%) - Şirketteki toplam yıl
-5. **TotalWorkingYears** (7.3%) - Toplam çalışma yılı
-6. **JobSatisfaction** (6.9%) - İş memnuniyeti
-7. **EnvironmentSatisfaction** (5.4%) - Çalışma ortamı memnuniyeti
-8. **WorkLifeBalance** (4.8%) - İş-yaşam dengesi
-9. **YearsInCurrentRole** (4.2%) - Mevcut roldeki yıl
-10. **StockOptionLevel** (3.7%) - Hisse senedi opsiyonu seviyesi
 
 ---
 

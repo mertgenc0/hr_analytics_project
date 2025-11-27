@@ -39,7 +39,7 @@ ENV/
 .DS_Store
 
 # Data (büyük dosyalar için)
-#*.csv
+*.csv
 #*.xlsx
 #*.db
 
